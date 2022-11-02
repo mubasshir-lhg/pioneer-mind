@@ -13,7 +13,7 @@ export default function SelectInput(props: TextFieldProps): ReactNode {
             SelectProps={{
                 IconComponent: KeyboardArrowDown,
                 displayEmpty: true,
-                renderValue: (val) => (val !== '' ? val : placeholder),
+                renderValue: (val: string) => (val !== '' ? val : placeholder),
                 inputProps: { MenuProps: { disableScrollLock: true } },
                 sx: { color: '#fff', textAlign: 'left' },
             }}
