@@ -15,6 +15,25 @@ export const theme = createTheme({
             defaultProps: {
                 disableElevation: true,
             },
+            variants: [
+                {
+                    props: { variant: 'gradientPrimary' },
+                    style: {
+                        background:
+                            'linear-gradient(to right,#75EBC9 , #F7FE9D)',
+                        color: '#000',
+                    },
+                },
+                {
+                    props: { variant: 'basic' },
+                    style: {
+                        color: '#fff',
+                        '&:hover': {
+                            backgroundColor: 'rgba(0,0,0,0.2)',
+                        },
+                    },
+                },
+            ],
             styleOverrides: {
                 root: {
                     textTransform: 'none',
@@ -66,6 +85,14 @@ export const theme = createTheme({
             styleOverrides: {
                 root: {
                     padding: '32px 24px',
+                },
+            },
+        },
+        MuiPopover: {
+            styleOverrides: {
+                paper: {
+                    backgroundColor: '#191726',
+                    color: '#fff',
                 },
             },
         },
@@ -154,10 +181,10 @@ export const theme = createTheme({
             900: '#111827',
         },
         action: {
-            active: '#6B7280',
-            focus: 'rgba(55, 65, 81, 0.12)',
-            hover: 'rgba(55, 65, 81, 0.04)',
-            selected: 'rgba(55, 65, 81, 0.08)',
+            active: '#75EBC9',
+            focus: '#252238',
+            hover: '#252238',
+            selected: '#75EBC9',
             disabledBackground: 'rgba(55, 65, 81, 0.12)',
             disabled: 'rgba(55, 65, 81, 0.26)',
         },

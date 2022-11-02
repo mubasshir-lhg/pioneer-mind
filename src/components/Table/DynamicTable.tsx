@@ -176,7 +176,6 @@ export const DynamicTable = <T extends IBase>({
                                     .slice(page * limit, page * limit + limit)
                                     .map((item) => (
                                         <TableRow
-                                            hover
                                             key={item.id as string}
                                             onClick={() => {
                                                 onRowClick?.(item)

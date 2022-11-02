@@ -21,7 +21,15 @@ export interface IUserData {
 export function UserContainer({ children }: IUserContainer): ReactNode {
     const [data, setData] = useState<IUserData>({
         isLoading: true,
-        user: null,
+        user: {
+            id: '12345',
+            name: 'Admin',
+            email: 'admin@gmail.com',
+            role: 'admin',
+            createdAt: '24/May/2022',
+            profileImageURL:
+                'https://miro.medium.com/max/600/1*PiHoomzwh9Plr9_GA26JcA.png',
+        },
     })
 
     const setUserData = (user: IUser): void => {

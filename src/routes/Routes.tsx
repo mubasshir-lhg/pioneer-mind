@@ -1,28 +1,31 @@
 /* eslint-disable prettier/prettier */
 import * as React from 'react'
 import { Navigate, useRoutes } from 'react-router-dom'
-import Login from '../pages/Login/Login'
+// import DashboardLayout from '../Layouts/Dashboard/DashboardLayout'
+import Dashboard from '../pages/Dashboard'
 import NotFound from '../pages/NotFound/NotFound'
-
-import PrivateRoute from './PrivateRoute'
+import Steps from '../pages/Steps/Steps'
 
 export default function Routes(): ReactNode {
     return useRoutes([
         // {
         //     path: '/dashboard',
-        //     element: <PrivateRoute navLink="/" component={DashboardLayout} />,
+        //     element: <DashboardLayout />,
         //     children: [
         //         {
-        //             path: '',
-        //             element: <div />,
+        //             path: '/',
+        //             element: <Dashboard />,
         //         },
-
         //     ],
         // },
         { path: '404', element: <NotFound /> },
         {
             path: '/',
-            element: <Login />,
+            element: <Steps />,
+        },
+        {
+            path: '/dashboard',
+            element: <Dashboard />,
         },
         {
             path: '*',
